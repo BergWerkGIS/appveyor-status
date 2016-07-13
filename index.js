@@ -24,13 +24,13 @@ request({
 	projects.sort(function (a, b) { return a.name < b.name ? -1 : a.name > b.name ? 1 : 0 });
 	projects.forEach(function (project) {
 		if (!project.builds || project.builds.length < 1) {
-			console.log(util.format('%s[%s] no builds', project.isPrivate ? '!PRIVATE REPO! ' :'', project.name));
+			console.log(util.format('%s[%s] no builds', project.isPrivate ? '!AppVeyor REPO! ' :'', project.name));
 		} else {
 			project.builds.forEach(function (build) {
 				var started = new Date(build.started);
 				var msg = util.format(
 					'%s[%s]\tbuild:%s %s branch:%s status:%s "%s"'
-					, project.isPrivate ? '!PRIVATE REPO! ' :''
+					, project.isPrivate ? '!AppVeyor PRIVATE! ' :''
 					, project.name
 					, build.version
 					, util.format(
