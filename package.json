@@ -1,0 +1,19 @@
+{
+  "name": "appveyor-status",
+  "version": "0.0.1",
+  "description": "Shows status of latest AppVeyor builds",
+  "author": "https://github.com/BergWerkGIS",
+  "keywords": [
+    "appveyor",
+    "build status"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/BergWerkGIS/appveyor-status.git"
+  },
+  "dependencies": {
+    "require": "*",
+    "cli-color": "*"
+  },
+  "license": "MIT"
+}
